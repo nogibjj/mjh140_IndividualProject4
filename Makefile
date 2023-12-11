@@ -24,23 +24,23 @@ all: venv install format lint refactor deploy
 
 ######################################
 
-venv:
-	python3 -m venv myenv
-		source myenv/bin/activate
+# venv:
+# 	python3 -m venv myenv
+# 		source myenv/bin/activate
 
-install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+# install:
+# 	pip install --upgrade pip &&\
+# 		pip install -r requirements.txt
 
-format:	
-	black *.py 
+# format:	
+# 	black *.py 
 
-lint:
-	ruff check *.py 
+# lint:
+# 	ruff check *.py 
 
-container-lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
+# container-lint:
+# 	docker run --rm -i hadolint/hadolint < Dockerfile
 
-refactor: format lint
+# refactor: format lint
 		
-all: install lint test format deploy
+# all: install lint test format deploy
